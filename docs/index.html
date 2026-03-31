@@ -2203,6 +2203,19 @@
             color: var(--white);
         }
 
+        .disclaimer-divider {
+            color: var(--gray-600);
+            margin: 0 0.5rem;
+        }
+
+        .disclaimer-april {
+            color: var(--accent);
+        }
+
+        .disclaimer-april i {
+            margin-right: 0.3rem;
+        }
+
 
         /* Adjust nav position for disclaimer */
         nav {
@@ -2275,9 +2288,11 @@
 
         @media (max-width: 768px) {
             .disclaimer-banner { padding: 0.5rem 1rem; }
+            .disclaimer-content { flex-direction: column; gap: 0.25rem; }
             .disclaimer-text { font-size: 0.7rem; }
-            nav { top: 50px; }
-            #hero { padding-top: 150px; }
+            .disclaimer-divider { display: none; }
+            nav { top: 70px; }
+            #hero { padding-top: 170px; }
             .hero-text h1 { font-size: 2.4rem; }
             .section-header h2 { font-size: 2rem; }
             .hero-stats { flex-wrap: wrap; gap: 1.5rem; }
@@ -2331,6 +2346,8 @@
         <div class="disclaimer-content">
             <span class="disclaimer-icon"><i class="fas fa-graduation-cap"></i></span>
             <span class="disclaimer-text"><strong>Educational Only</strong> — Analysis of accidentally leaked source code. Not affiliated with Anthropic.</span>
+            <span class="disclaimer-divider">|</span>
+            <span class="disclaimer-text disclaimer-april"><i class="fas fa-calendar-day"></i> <strong>Note:</strong> Leaked on March 31, 2026 — some speculate this could be an April Fools' setup 🤔</span>
         </div>
     </div>
 
