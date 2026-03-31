@@ -323,7 +323,7 @@
             display: flex;
             align-items: center;
             position: relative;
-            padding-top: 140px;
+            padding-top: 120px;
             padding-bottom: 4rem;
         }
 
@@ -2167,9 +2167,9 @@
 
         /* Disclaimer Banner */
         .disclaimer-banner {
-            background: var(--gray-900);
+            background: linear-gradient(90deg, var(--darker) 0%, var(--gray-900) 50%, var(--darker) 100%);
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            padding: 0.75rem 2rem;
+            padding: 0.4rem 1rem;
             text-align: center;
             position: fixed;
             top: 0;
@@ -2180,46 +2180,65 @@
         }
 
         .disclaimer-content {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .disclaimer-icon {
-            font-size: 1rem;
-            color: var(--accent);
+            gap: 0.5rem;
+            flex-wrap: nowrap;
         }
 
         .disclaimer-text {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: var(--gray-400);
         }
 
         .disclaimer-text strong {
-            color: var(--white);
+            color: var(--gray-300);
         }
 
-        .disclaimer-divider {
-            color: var(--gray-600);
-            margin: 0 0.5rem;
-        }
-
-        .disclaimer-april {
+        .april-fools-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: linear-gradient(90deg, rgba(232, 197, 71, 0.15), rgba(232, 93, 93, 0.15));
+            border: 1px solid rgba(232, 197, 71, 0.4);
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 600;
             color: var(--accent);
+            margin-left: 0.5rem;
+            animation: pulse-glow 1.5s ease-in-out infinite;
+            white-space: nowrap;
         }
 
-        .disclaimer-april i {
-            margin-right: 0.3rem;
+        .april-fools-tag i {
+            animation: wiggle 0.8s ease-in-out infinite;
         }
 
+        @keyframes pulse-glow {
+            0%, 100% { 
+                box-shadow: 0 0 5px rgba(232, 197, 71, 0.3);
+                border-color: rgba(232, 197, 71, 0.4);
+            }
+            50% { 
+                box-shadow: 0 0 20px rgba(232, 197, 71, 0.7), 0 0 40px rgba(232, 93, 93, 0.4);
+                border-color: rgba(232, 197, 71, 1);
+                background: linear-gradient(90deg, rgba(232, 197, 71, 0.25), rgba(232, 93, 93, 0.25));
+            }
+        }
+
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-12deg); }
+            75% { transform: rotate(12deg); }
+        }
 
         /* Adjust nav position for disclaimer */
         nav {
-            top: 42px;
+            top: 32px;
         }
 
         nav.scrolled {
@@ -2287,12 +2306,12 @@
         }
 
         @media (max-width: 768px) {
-            .disclaimer-banner { padding: 0.5rem 1rem; }
-            .disclaimer-content { flex-direction: column; gap: 0.25rem; }
-            .disclaimer-text { font-size: 0.7rem; }
-            .disclaimer-divider { display: none; }
-            nav { top: 70px; }
-            #hero { padding-top: 170px; }
+            .disclaimer-banner { padding: 0.4rem 0.5rem; }
+            .disclaimer-content { gap: 0.3rem; }
+            .disclaimer-text { font-size: 0.65rem; }
+            .april-fools-tag { font-size: 0.6rem; padding: 0.15rem 0.4rem; margin-left: 0.3rem; }
+            nav { top: 28px; }
+            #hero { padding-top: 130px; }
             .hero-text h1 { font-size: 2.4rem; }
             .section-header h2 { font-size: 2rem; }
             .hero-stats { flex-wrap: wrap; gap: 1.5rem; }
@@ -2344,10 +2363,8 @@
     <!-- Disclaimer Banner -->
     <div class="disclaimer-banner" id="disclaimer">
         <div class="disclaimer-content">
-            <span class="disclaimer-icon"><i class="fas fa-graduation-cap"></i></span>
-            <span class="disclaimer-text"><strong>Educational Only</strong> — Analysis of accidentally leaked source code. Not affiliated with Anthropic.</span>
-            <span class="disclaimer-divider">|</span>
-            <span class="disclaimer-text disclaimer-april"><i class="fas fa-calendar-day"></i> <strong>Note:</strong> Leaked on March 31, 2026 — some speculate this could be an April Fools' setup 🤔</span>
+            <span class="disclaimer-text"><strong>Educational Only</strong> — Analysis of leaked source code. Not affiliated with Anthropic.</span>
+            <span class="april-fools-tag"><i class="fas fa-jester"></i> April Fools? Leaked March 31!</span>
         </div>
     </div>
 
