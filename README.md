@@ -30,14 +30,6 @@
 
 <br>
 
-<!-- Visitor Counter & GitHub Stats -->
-<img src="https://komarev.com/ghpvc/?username=mimran-khan-claude-code&label=👀%20Views&color=blueviolet&style=flat-square" alt="Profile Views">
-<img src="https://img.shields.io/github/stars/mimran-khan/claude-code-source?style=flat-square&logo=github&label=⭐%20Stars&color=yellow" alt="Stars">
-<img src="https://img.shields.io/github/forks/mimran-khan/claude-code-source?style=flat-square&logo=github&label=🍴%20Forks&color=blue" alt="Forks">
-<img src="https://img.shields.io/github/watchers/mimran-khan/claude-code-source?style=flat-square&logo=github&label=👁%20Watchers&color=green" alt="Watchers">
-
-<br>
-
 <a href="#-overview"><img src="https://img.shields.io/badge/Overview-blue?style=flat-square" alt="Overview"></a>
 <a href="#-architecture"><img src="https://img.shields.io/badge/Architecture-green?style=flat-square" alt="Architecture"></a>
 <a href="#-tools"><img src="https://img.shields.io/badge/Tools-orange?style=flat-square" alt="Tools"></a>
@@ -182,9 +174,40 @@ This source code is **proprietary** and owned by **Anthropic**. This repository 
 
 ---
 
+---
+
 <div align="center">
 
+## 📈 Repository Stats
+
+<br>
+
+<a href="https://github.com/mimran-khan/claude-code-source/stargazers">
+  <img src="https://img.shields.io/github/stars/mimran-khan/claude-code-source?style=for-the-badge&logo=github&logoColor=white&label=Stars&color=yellow" alt="Stars">
+</a>
+<a href="https://github.com/mimran-khan/claude-code-source/network/members">
+  <img src="https://img.shields.io/github/forks/mimran-khan/claude-code-source?style=for-the-badge&logo=github&logoColor=white&label=Forks&color=blue" alt="Forks">
+</a>
+<a href="https://github.com/mimran-khan/claude-code-source/watchers">
+  <img src="https://img.shields.io/github/watchers/mimran-khan/claude-code-source?style=for-the-badge&logo=github&logoColor=white&label=Watchers&color=green" alt="Watchers">
+</a>
+
+<br><br>
+
+<img src="https://komarev.com/ghpvc/?username=mimran-khan-claude-code-source&label=Repository%20Views&color=blueviolet&style=for-the-badge" alt="Repository Views">
+
+<br><br>
+
+<img src="https://img.shields.io/github/repo-size/mimran-khan/claude-code-source?style=for-the-badge&logo=github&label=Repo%20Size&color=orange" alt="Repo Size">
+<img src="https://img.shields.io/github/last-commit/mimran-khan/claude-code-source?style=for-the-badge&logo=github&label=Last%20Commit&color=purple" alt="Last Commit">
+
+<br><br>
+
+---
+
 **⭐ Star this repo if you found it useful! ⭐**
+
+<br>
 
 Made for educational purposes • Not affiliated with Anthropic
 
