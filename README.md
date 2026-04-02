@@ -12,8 +12,6 @@
 
 # Claude Code Source
 
-### Complete Python Port of Anthropic's Agentic Coding Assistant
-
 ##### *Reverse-engineered from leaked TypeScript source*
 
 <br>
