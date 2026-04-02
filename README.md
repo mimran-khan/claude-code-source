@@ -1,5 +1,9 @@
 <div align="center">
 
+### [📺 **VIEW LIVE INTERACTIVE ANALYSIS →**](https://mimran-khan.github.io/claude-code-source/)
+
+<br>
+
 > **🐍 Looking for the Python implementation?**
 > 
 > **[👉 Check out claude-code-python](https://github.com/mimran-khan/claude-code-python)** - Complete Python port with 1,805 modules, 149k lines, 925 tests
