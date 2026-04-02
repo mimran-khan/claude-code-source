@@ -197,10 +197,44 @@ claude-code-source/
 
 ## 🔗 Related
 
-- **[🐍 Python Port](https://github.com/mimran-khan/claude-code-python)** - Complete Python implementation
-- **[🌐 Live Analysis](https://mimran-khan.github.io/claude-code-source/)** - Interactive website
-- **[📦 Official CLI](https://github.com/anthropics/claude-code)** - Anthropic's official repo
-- **[📚 Official Docs](https://code.claude.com/docs/en/overview)** - Claude Code documentation
+<table>
+<tr>
+<td align="center" width="25%">
+<a href="https://mimran-khan.github.io/claude-code-source/">
+<br>🌐<br><br>
+<b>Live Analysis</b>
+</a>
+<br>
+<sub>Interactive website</sub>
+</td>
+<td align="center" width="25%">
+<a href="https://github.com/mimran-khan/claude-code-python">
+<br>🐍<br><br>
+<b>Python Port</b>
+</a>
+<br>
+<sub>Complete Python implementation</sub>
+</td>
+<td align="center" width="25%">
+<a href="https://github.com/anthropics/claude-code">
+<br>📦<br><br>
+<b>Official CLI</b>
+</a>
+<br>
+<sub>Anthropic's official repo</sub>
+</td>
+<td align="center" width="25%">
+<a href="https://docs.anthropic.com/en/docs/claude-code">
+<br>📚<br><br>
+<b>Official Docs</b>
+</a>
+<br>
+<sub>Claude Code documentation</sub>
+</td>
+</tr>
+</table>
+
+### 🌐 [**VIEW LIVE INTERACTIVE ANALYSIS →**](https://mimran-khan.github.io/claude-code-source/)
 
 <br>
 
