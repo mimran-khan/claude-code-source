@@ -1,10 +1,16 @@
 <div align="center">
 
+> **🐍 Looking for the Python implementation?**
+> 
+> **[👉 Check out claude-code-python](https://github.com/mimran-khan/claude-code-python)** - Complete Python port with 1,805 modules, 149k lines, 925 tests
+
+<br>
+
 <img src="https://img.shields.io/badge/🔓_LEAKED-Claude_Code-FF0000?style=for-the-badge&labelColor=000000" alt="Leaked" width="300">
 
 <br><br>
 
-# Claude Code Python
+# Claude Code Source
 
 ### Complete Python Port of Anthropic's Agentic Coding Assistant
 
