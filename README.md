@@ -12,7 +12,9 @@
 
 # Claude Code Source
 
-##### *Reverse-engineered from leaked TypeScript source*
+### The Complete Leaked TypeScript Source Code
+
+##### *Extracted from Anthropic's npm package via source maps*
 
 <br>
 
@@ -32,14 +34,14 @@
 
 <br><br>
 
-[![Python 3.11+](https://img.shields.io/badge/Python-3.11+-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
-[![Tests](https://img.shields.io/badge/Tests-925_passing-4CAF50?style=flat-square&logo=pytest&logoColor=white)](./claude-code-python/tests/)
-[![Lines](https://img.shields.io/badge/Lines-149k+-blue?style=flat-square)](./claude-code-python/src/)
-[![License](https://img.shields.io/badge/License-Educational-orange?style=flat-square)](./claude-code-python/LICENSE)
+[![TypeScript](https://img.shields.io/badge/TypeScript-99.5%25-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Files](https://img.shields.io/badge/Files-1,900+-blue?style=flat-square)](./tools/)
+[![Lines](https://img.shields.io/badge/Lines-512k+-orange?style=flat-square)](./QueryEngine.ts)
+[![License](https://img.shields.io/badge/License-Educational-red?style=flat-square)](#-legal-notice)
 
 <br>
 
-[Background](#-background) · [Disclaimer](#%EF%B8%8F-disclaimer) · [Installation](#-installation) · [Architecture](#-architecture) · [Documentation](#-documentation)
+[Overview](#-overview) · [Disclaimer](#%EF%B8%8F-disclaimer) · [Architecture](#-architecture) · [Tools](#-tools) · [Commands](#%EF%B8%8F-commands)
 
 </div>
 
@@ -74,26 +76,18 @@
 
 <br>
 
-## 📖 Background
+## 🌟 Overview
 
-### The Leak
+**Claude Code** is Anthropic's official agentic coding assistant — a powerful AI-powered CLI tool that can:
 
-On March 31, 2026, Anthropic accidentally published their Claude Code npm package with source maps included. This exposed:
-
-- **512,000+ lines** of TypeScript source code
-- **1,900+ files** revealing the complete architecture
-- **40+ agent tools** and their implementations
-- **85+ slash commands** with internal logic
-- **44+ feature flags** including unreleased features
-
-### The Python Port
-
-This repository represents a **complete, line-by-line migration** of the leaked TypeScript codebase to Python. The goal is purely educational—to help developers understand:
-
-- How production agentic AI systems are built
-- Tool-use patterns and orchestration
-- Context management at scale
-- MCP (Model Context Protocol) implementation
+- 🖥️ Read, write, and edit files in your codebase
+- ⚡ Execute shell commands and scripts
+- 🔍 Search code with regex and glob patterns
+- 🤖 Spawn sub-agents for parallel work
+- 🌐 Fetch web content and search the internet
+- 🔌 Connect to external tools via MCP (Model Context Protocol)
+- 📋 Manage tasks, todos, and session state
+- 🎨 Provide beautiful terminal UI with themes
 
 <br>
 
@@ -101,192 +95,16 @@ This repository represents a **complete, line-by-line migration** of the leaked 
 
 <br>
 
-## 🚀 The Migration
+## 📊 What's Inside
 
-<table>
-<tr>
-<td width="50%">
-
-### 📊 By the Numbers
-
-| Metric | Value |
+| Metric | Count |
 |:-------|------:|
-| Python modules | **1,805** |
-| Lines of code | **149,032** |
-| Unit tests | **925** |
-| Tools ported | **88** |
-| Services ported | **40+** |
-| Commands ported | **85+** |
-
-</td>
-<td width="50%">
-
-### ⚡ What's Included
-
-- ✅ Full query engine with tool-use loop
-- ✅ All 88 agent tools (file, shell, web, MCP)
-- ✅ Complete service layer (API, OAuth, MCP)
-- ✅ Working CLI with interactive mode
-- ✅ Comprehensive test suite
-- ✅ Type hints throughout
-
-</td>
-</tr>
-</table>
-
-<br>
-
----
-
-<br>
-
-## 🎯 Why Python?
-
-Claude Code is an exceptional piece of engineering, but the original is locked to Node.js. This port enables:
-
-<br>
-
-<table>
-<tr>
-<td align="center" width="25%">
-<br>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="48">
-<br><br>
-<b>Python Developers</b>
-<br>
-<sub>Study in your native language</sub>
-<br><br>
-</td>
-<td align="center" width="25%">
-<br>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" width="48">
-<br><br>
-<b>Data Scientists</b>
-<br>
-<sub>Explore in notebooks</sub>
-<br><br>
-</td>
-<td align="center" width="25%">
-<br>
-🔬
-<br><br>
-<b>Researchers</b>
-<br>
-<sub>Analyze agent patterns</sub>
-<br><br>
-</td>
-<td align="center" width="25%">
-<br>
-🎓
-<br><br>
-<b>Students</b>
-<br>
-<sub>Learn from production code</sub>
-<br><br>
-</td>
-</tr>
-</table>
-
-<br>
-
----
-
-<br>
-
-## 📦 Installation
-
-> **Note**: This is for educational study only. For actual use, please purchase Claude Code from Anthropic.
-
-### Requirements
-
-- Python 3.11 or higher
-- An Anthropic API key (for testing)
-
-### Setup
-
-```bash
-# Clone the repository
-git clone https://github.com/mimran-khan/claude-code-source.git
-cd claude-code-source/claude-code-python
-
-# Create and activate virtual environment
-python3.11 -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
-
-# Install the package
-pip install -e ".[dev]"
-
-# Set your API key (for testing)
-export ANTHROPIC_API_KEY="sk-ant-..."
-```
-
-### Verify Installation
-
-```bash
-claude --version
-claude doctor
-```
-
-<br>
-
----
-
-<br>
-
-## 💻 Usage
-
-### Command Line
-
-```bash
-# Start interactive chat
-claude
-
-# One-shot query (print mode)
-claude -p "Explain what this codebase does"
-
-# Run diagnostics
-claude doctor
-```
-
-### Python API
-
-```python
-import asyncio
-from claude_code.core.query_engine import QueryEngine, QueryEngineConfig
-
-async def main():
-    engine = QueryEngine(QueryEngineConfig(
-        cwd="/path/to/your/project",
-        tools=[],
-        max_tokens=4096,
-    ))
-    
-    response = await engine.query("What files are in this directory?")
-    print(response)
-
-asyncio.run(main())
-```
-
-<br>
-
----
-
-<br>
-
-## 🛠️ Tools
-
-All 88 tools from the original Claude Code have been ported:
-
-| Category | Tools |
-|:---------|:------|
-| **File Operations** | `Read`, `Write`, `Edit`, `MultiEdit`, `Glob`, `Grep`, `Search` |
-| **Shell Execution** | `Bash`, `PowerShell`, subprocess with timeout/abort |
-| **Web Access** | `WebFetch`, `WebSearch` |
-| **MCP Protocol** | Full client implementation, tool discovery, OAuth |
-| **Agent System** | `AgentTool`, `TaskTool`, sub-agent spawning |
-| **Notebooks** | Jupyter notebook reading and editing |
-| **Memory** | Todo lists, task management, session state |
-| **Planning** | Plan mode, thinking tools, mode switching |
+| **TypeScript Files** | 1,900+ |
+| **Lines of Code** | 512,000+ |
+| **Agent Tools** | 40+ |
+| **Slash Commands** | 85+ |
+| **Feature Flags** | 44+ |
+| **React Components** | 146 |
 
 <br>
 
@@ -297,50 +115,31 @@ All 88 tools from the original Claude Code have been ported:
 ## 🏗️ Architecture
 
 ```
-claude-code-python/src/claude_code/
-├── core/                 # Query engine, tool contracts, context
-├── engine/               # High-level SDK interface
-├── cli/                  # Typer-based command line interface
-├── tools/                # 88 tool implementations
-│   ├── bash_tool/
-│   ├── file_read_tool/
-│   ├── grep_tool/
-│   ├── mcp_tool/
-│   └── ...
-├── services/             # External integrations
-│   ├── api/              # Anthropic API client
+claude-code-source/
+├── QueryEngine.ts        # 🧠 Core LLM engine (46K lines!)
+├── Tool.ts               # 🔧 Tool system base
+├── Task.ts               # 📋 Task management
+├── commands/             # ⌨️ 85+ slash commands
+├── tools/                # 🛠️ 40+ agent tools
+├── components/           # 🎨 React UI components
+├── services/             # 🔌 External integrations
+│   ├── api/              # Anthropic API
 │   ├── mcp/              # Model Context Protocol
-│   ├── compact/          # Context compaction
-│   ├── oauth/            # Authentication
 │   └── ...
-├── hooks/                # Event system
-├── commands/             # Slash commands (/commit, /review, etc.)
-├── bridge/               # Remote session management
-└── utils/                # Shared utilities (500+ modules)
+├── hooks/                # ⚡ React hooks
+├── bridge/               # 🌉 Remote session management
+├── utils/                # 🧰 Shared utilities (330+ files)
+└── ...
 ```
 
-### Request Flow
+### Key Components
 
-```
-┌─────────────┐     ┌──────────────┐     ┌─────────────────┐
-│  User Input │────▶│ Query Engine │────▶│  Anthropic API  │
-└─────────────┘     └──────────────┘     └─────────────────┘
-                           │                      │
-                           │                      ▼
-                           │              ┌───────────────┐
-                           │              │ Tool Use?     │
-                           │              └───────────────┘
-                           │                 Yes │    │ No
-                           │                     ▼    │
-                           │              ┌──────────┐│
-                           │◀─────────────│ Execute  ││
-                           │              │   Tool   ││
-                           │              └──────────┘│
-                           │                          ▼
-                           │                   ┌──────────┐
-                           └──────────────────▶│ Response │
-                                               └──────────┘
-```
+| Component | Lines | Purpose |
+|:----------|------:|:--------|
+| QueryEngine | 46,000+ | Core agentic loop, tool orchestration, context management |
+| Tool System | 15,000+ | 40+ tools for file ops, search, execution, web |
+| Bridge | 8,000+ | Remote sessions via WebSocket/SSE |
+| Skills | 5,000+ | Prompt-based extensibility |
 
 <br>
 
@@ -348,16 +147,15 @@ claude-code-python/src/claude_code/
 
 <br>
 
-## 📚 Documentation
+## 🛠️ Tools (40+)
 
-| Document | Description |
-|:---------|:------------|
-| [ARCHITECTURE.md](./claude-code-python/docs/ARCHITECTURE.md) | System design, component relationships |
-| [TOOLS.md](./claude-code-python/docs/TOOLS.md) | Complete tool reference with examples |
-| [SERVICES.md](./claude-code-python/docs/SERVICES.md) | Service layer documentation |
-| [API.md](./claude-code-python/docs/API.md) | Python API reference |
-| [DATA_FLOW.md](./claude-code-python/docs/DATA_FLOW.md) | Request/response flow diagrams |
-| [CHANGELOG.md](./claude-code-python/CHANGELOG.md) | Version history |
+| Category | Tools |
+|:---------|:------|
+| **File Operations** | FileReadTool, FileWriteTool, FileEditTool, NotebookEditTool |
+| **Search** | GlobTool, GrepTool, LSPTool |
+| **Execution** | BashTool, PowerShellTool, AgentTool |
+| **Web** | WebFetchTool, WebSearchTool, MCPTool |
+| **Tasks** | TodoWriteTool, TaskCreateTool, TaskUpdateTool |
 
 <br>
 
@@ -365,33 +163,44 @@ claude-code-python/src/claude_code/
 
 <br>
 
-## 🧪 Development
+## ⌨️ Commands (85+)
 
-### Running Tests
+| Category | Examples |
+|:---------|:---------|
+| **Git** | `/commit`, `/pr_comments`, `/review` |
+| **Session** | `/compact`, `/clear`, `/resume` |
+| **Config** | `/config`, `/permissions`, `/theme` |
+| **Development** | `/doctor`, `/mcp`, `/skills` |
+| **Hidden** | `/buddy` 🐾, `/dream`, `/ultraplan` |
 
-```bash
-cd claude-code-python
+<br>
 
-# All tests
-pytest
+---
 
-# With coverage report
-pytest --cov=src/claude_code --cov-report=html
+<br>
 
-# Skip slow integration tests
-pytest -m "not integration"
-```
+## 🚩 Feature Flags (44+)
 
-### Code Quality
+| Flag | Purpose |
+|:-----|:--------|
+| `KAIROS` | Full autonomous agent mode |
+| `PROACTIVE` | Proactive assistance |
+| `BUDDY` | 🐾 Digital pet system! |
+| `VOICE_MODE` | Voice input/output |
+| `CACHED_MICROCOMPACT` | Context optimization |
 
-```bash
-# Lint and format
-ruff check src tests --fix
-ruff format src tests
+<br>
 
-# Type checking
-mypy src
-```
+---
+
+<br>
+
+## 🔗 Related
+
+- **[🐍 Python Port](https://github.com/mimran-khan/claude-code-python)** - Complete Python implementation
+- **[🌐 Live Analysis](https://mimran-khan.github.io/claude-code-source/)** - Interactive website
+- **[📦 Official CLI](https://github.com/anthropics/claude-code)** - Anthropic's official repo
+- **[📚 Official Docs](https://code.claude.com/docs/en/overview)** - Claude Code documentation
 
 <br>
 
@@ -423,17 +232,10 @@ If you are from Anthropic and wish to have this repository removed, please open 
 
 <img src="https://img.shields.io/github/repo-size/mimran-khan/claude-code-source?style=for-the-badge&logo=github&label=Repo%20Size&color=orange" alt="Repo Size">
 <img src="https://img.shields.io/github/last-commit/mimran-khan/claude-code-source?style=for-the-badge&logo=github&label=Last%20Commit&color=purple" alt="Last Commit">
-<img src="https://img.shields.io/github/commit-activity/m/mimran-khan/claude-code-source?style=for-the-badge&logo=github&label=Commits/Month&color=green" alt="Commit Activity">
 
 <br><br>
 
-<img src="https://img.shields.io/github/issues/mimran-khan/claude-code-source?style=flat-square&logo=github&label=Issues" alt="Issues">
-<img src="https://img.shields.io/github/issues-pr/mimran-khan/claude-code-source?style=flat-square&logo=github&label=Pull%20Requests" alt="PRs">
-<img src="https://img.shields.io/github/contributors/mimran-khan/claude-code-source?style=flat-square&logo=github&label=Contributors" alt="Contributors">
-
-<br><br>
-
-**[⭐ Star this repo](https://github.com/mimran-khan/claude-code-source) · [🍴 Fork](https://github.com/mimran-khan/claude-code-source/fork) · [🐛 Report Issue](https://github.com/mimran-khan/claude-code-source/issues) · [💬 Discussions](https://github.com/mimran-khan/claude-code-source/discussions)**
+**[⭐ Star](https://github.com/mimran-khan/claude-code-source) · [🍴 Fork](https://github.com/mimran-khan/claude-code-source/fork) · [🐛 Report Issue](https://github.com/mimran-khan/claude-code-source/issues)**
 
 <br>
 
